@@ -1,5 +1,5 @@
 import ReactTween from './ReactTween';
 
-export default {
+module.exports = {
 	ReactTween
 };
