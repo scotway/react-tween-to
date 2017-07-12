@@ -1,0 +1,15 @@
+{
+  "name": "reacttween",
+  "version": "0.1.0",
+  "description": "A simple react Higher Order Component that is smart enough to do some easy animation for you",
+  "main": "build/index.js",
+  "repository": "https://github.com/scotway/reacttween",
+  "author": "Scott Conway",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "np": "^2.16.0",
+    "watch": "^1.0.2"
+  }
+}
