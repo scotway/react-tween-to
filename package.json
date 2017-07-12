@@ -2,6 +2,7 @@
 	"author": "Scott Conway",
 	"dependencies": {
 		"lodash": "^4.17.4",
+		"prop-types": "^15.5.10",
 		"react": "^15.6.1"
 	},
 	"description": "A simple react Higher Order Component that is smart enough to do some easy animation for you",
@@ -13,12 +14,15 @@
 		"babel-preset-es2015": "^6.24.1",
 		"babel-preset-latest": "^6.24.1",
 		"babel-preset-react": "^6.24.1",
+		"chai": "^4.1.0",
 		"enzyme": "^2.9.1",
 		"expect": "^1.20.2",
+		"jsdom": "^11.1.0",
 		"mocha": "^3.4.2",
 		"np": "^2.16.0",
 		"path": "^0.12.7",
 		"react-dom": "^15.6.1",
+		"react-test-renderer": "^15.6.1",
 		"watch": "^1.0.2",
 		"webpack": "^3.2.0",
 		"webpack-preset-babel-stage-2": "^0.2.0"
@@ -28,7 +32,7 @@
 	"name": "reacttween",
 	"repository": "https://github.com/scotway/reacttween",
 	"scripts": {
-		"test": "mocha --compilers js:babel-core/register",
+		"test": "mocha --compilers js:babel-core/register 'src/*.test.js'",
 		"watch": "webpack --watch",
 		"build": "webpack --optimize-minimize"
 	},

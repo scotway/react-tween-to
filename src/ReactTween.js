@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import _ from 'lodash';
 
 const printMs = () => {
 	var d = new Date();
@@ -19,7 +21,7 @@ const ReactTween = (WrappedComponent) => {
 			this.animationKeys = ['top', 'left', 'bottom', 'right', 'height', 'width', 'opacity', 'fontSize', 'zIndex'];
 
 			this.state = {
-				timing: (props.timing) ? props.timing : 500,
+				timing: props.timing,
 				easing: props.easing,
 				frame: 0,
 				top: props.top,
@@ -162,6 +164,43 @@ const ReactTween = (WrappedComponent) => {
 			return <WrappedComponent {...this.props} tweenStyles={styles} />;
 		}
 	};
+}
+
+ReactTween.defaultProps = {
+	timing: 500,
+	easing: 'simple'
+};
+
+ReactTween.propTypes = {
+	timing: PropTypes.number.isRequired,
+	easing: PropTypes.string.isRequired,
+	top: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string,
+	]),
+	left: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string,
+	]),
+	bottom: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string,
+	]),
+	right: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string,
+	]),
+	fontSize: PropTypes.string,
+	height: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string,
+	]),
+	width: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string,
+	]),
+	opacity: PropTypes.number,
+	zIndex: PropTypes.number
 }
 
 export default ReactTween;
