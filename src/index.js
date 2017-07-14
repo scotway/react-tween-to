@@ -1,4 +1,4 @@
-import ReactTween from './ReactTween';
+//import ReactTween from './ReactTween';
 
 module.exports = {
 	ReactTween

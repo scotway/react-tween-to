@@ -36,7 +36,7 @@ const ReactTween = (WrappedComponent) => {
 			};
 		}
 
-		componentDidMount() { }
+		componentDidMount() {}
 
 		componentWillReceiveProps(nextProps) {
 			printMs()
